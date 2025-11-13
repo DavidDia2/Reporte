@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>- Gestión360°: control total de activos, insumos e información técnica.</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300;400;500;600;700;800&family=Satisfy&display=swap"
         rel="stylesheet">
 
     <style>
@@ -71,6 +73,26 @@
             letter-spacing: 0.5px;
             margin-top: 0;
         }
+
+        /* === ESTILOS NUEVOS DE MARCA === */
+        .brand-tagline {
+            font-family: 'Satisfy', cursive;
+            font-size: 1.5rem;
+            /* 24px */
+            color: #333;
+            /* Un gris oscuro, como en la guía */
+            margin-top: -10px;
+            /* Ajuste para que quede pegado al logo */
+            margin-left: 8px;
+            /* Pequeño ajuste visual */
+        }
+
+        .text-brand-green {
+            color: #698E28 !important;
+            /* El Verde Pantone 368 C oficial */
+        }
+
+        /* === FIN DE ESTILOS NUEVOS === */
 
         /* Davo: preguntas sin viñeta + separador sutil (subtítulo) */
         .dv-question-subtitle {
@@ -161,6 +183,7 @@
             </text>
         </svg>
     </div>
+    <p class="brand-tagline" style="margin-left: 1.5rem; margin-top: -15px;">Cada día más cerca</p>
     <div class="container mx-auto p-4 sm:p-6 md:p-12">
         <header class="text-center mb-12">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Gestión 360° - SSGG</h1>
@@ -224,7 +247,7 @@
                     </div>
                     <div class="step-line w-full absolute top-1/2 left-0 hidden md:block"></div>
                     <div id="step-8" data-step="8"
-                        class="step w-full md:w-1/A p-4 rounded-lg bg-white shadow-md border border-gray-200 text-center z-10 md:ml-4">
+                        class="step w-full md:w-1/4 p-4 rounded-lg bg-white shadow-md border border-gray-200 text-center z-10 md:ml-4">
                         <h3 class="font-semibold">TECNICOS INTERNOS</h3>
                     </div>
 
@@ -289,7 +312,8 @@
                         'Reportes del NPS del contact Center y tecnicos internos.',
                         'Reportes del aplicativo GESTOCK.',
                         '¿En qué impacta esto?',
-                        '<strong class="text-green-600">Visibilidad total por tienda:</strong> Permite al equipo de Mantenimiento y Operaciones tener una visión completa y actualizada del estado de cada tienda, facilitando la toma de decisiones informadas.',
+                        // === VERDE OFICIAL APLICADO ===
+                        '<strong class="text-brand-green">Visibilidad total por tienda:</strong> Permite al equipo de Mantenimiento y Operaciones tener una visión completa y actualizada del estado de cada tienda, facilitando la toma de decisiones informadas.',
                         'Trazabilidad en tiempo real.',
                         'Reducción de errores y tiempos de respuesta.',
                     ]
@@ -301,7 +325,7 @@
                     role: 'Agente ➔ Compras',
                     actions: [
                         'Una plataforma que centraliza toda la información técnica, documental y operativa de cada tienda.',
-                        '<strong class="text-green-600 mt-2 block">Si Compras aprueba el costo:</strong> Se solicita a Administración avanzar con el proceso interno y al proveedor iniciar el trabajo (ver paso 6).',
+                        '<strong class="text-green-600 mt-2 block">Si Compras aprueba el costo:</strong> Se solicita a Administración avanzar con el proceso interno y al proveedor iniciar el trabajo (ver paso 6).', // (Dejamos este verde por ser semántico de "aprobado")
                         '<strong class="text-[var(--brand-red)] mt-2 block">Si Compras rechaza el valor:</strong> Se debe aguardar a que Compras renegocie los costos con el proveedor.',
                         '<strong class="text-[var(--brand-red)] font-bold mt-2 block">(Sin excepción, no se puede avanzar nada sin el OK del costo de Compras).</strong>',
                         '<strong class="text-[var(--brand-red)] font-bold mt-2 block">(IMPORTANTE: En el proceso de aprobación interno, el proveedor no debe estar en copia. El agente externo no debe saber bajo qué punto presupuestario (CAPEX/OPEX) se avanzará con el gasto).</strong>'
@@ -320,7 +344,8 @@
                         'Trazabilidad de trabajos técnicos en tiendas',
                         '<strong>Activos en puesta de valor.</strong>',
                         '¿En qué impacta esto?',
-                        '<strong class="text-green-600">Optimización del stock y recursos:</strong> Permite una gestión eficiente del stock de insumos y activos, reduciendo costos y mejorando la disponibilidad de recursos.',
+                        // === VERDE OFICIAL APLICADO ===
+                        '<strong class="text-brand-green">Optimización del stock y recursos:</strong> Permite una gestión eficiente del stock de insumos y activos, reduciendo costos y mejorando la disponibilidad de recursos.',
                         'Mejora en la planificación y ejecución de mantenimientos.',
                         '100% trazabilidad de activos.',
                         'Mejora en eficiencia operativa y control técnico.'
@@ -389,9 +414,9 @@
             const stepLinkMap = {
                 1: repoBaseUrl + 'flyer-lanzamiento.jpg', // Botón 1 (Lanzamiento)
                 4: 'https://daviddia2.github.io/INFO-VF',
-                6: 'https://www.appsheet.com/Account/Login?appName=Gestock%20DIA&FullScope=False&provider=google&returnUrl=https%3A%2F%2Fwww.appsheet.com%2Fstart%2Fdb447f85-4531-4d25-bf60-52bc322a70ec%3Fplatform%3Ddesktop#appName=NewApp-925466678-25-08-28&vss=H4sIAAAAAAAAA6WQsQrCMBCGX0Vu7lAnIat0ENFBxcV0iMlVgjUpTWotIe_uxSq6quP9x_fdzwW4auy3XsgzsEN4T0scgEHgsBsa5MA4zK3xra05ZBzW4jKGhZlQ7vTJCA4RYpm9FB4dsPC1gf3dIQOt0HhdaWyTLsGkeaK0TiAFHxjEDC6dF8caH80TtrH9eD_PKzHDqSTSYY3So6JXlTESVFnZOVR7avxbU7cwxa0RRq2sorOVqB3GO6x3rXyVAQAA&row=00fa7e1f&view=En%20Consigna',
+                6: 'https://www.appsheet.com/Account/Login?appName=Gestock%20DIA&FullScope=False&provider=google&returnUrl=https%3A%2F%2Fwww.appsheet.com%2Fstart%2Fdb447f85-4531-4d25-bf60-52bc322a70ec%3Fplatform%3Ddesktop#appName=NewApp-925466678-25-08-28&vss=H4sIAAAAAAAAA6WQsQrCMBCGX0Vu7lAnIat0ENFBxcV0iMlVgjUpTWotIe_uxSq6quP9x_fdzwW4auy3XsgzsEN4T0scgEHgsBsa5MA4zK3xra05ZBzW4jKGhZlQ7vTJCA4RYpm9FB4dsPC1gf3dIQOt0HhdaWyTLsGkeaK0TiAFHxjEDC6dF8caH80TtrH9eD_PKzHDqSTSYY3So6JXlTESVFnZOVR7avxbU7cwxa0RRq2sorOVqB3GO6x3rXyVAQAA&row=00fae1f&view=En%20Consigna',
 
-                // ===== ESTE ES EL CAMBIO (con L) =====
+                // ===== NOMBRE CORREGIDO (con L) =====
                 8: repoBaseUrl + 'MailTec.jpg'
                 // =====================================
             };
@@ -522,7 +547,9 @@
                 });
             }
 
+            // === ESTA ES LA LÍNEA CORREGIDA ===
             stepsData.forEach((step, idx) => {
+                // ==================================
                 const subStep = document.createElement('div');
                 subStep.dataset.step = step.id;
                 subStep.textContent = (idx + 1);
